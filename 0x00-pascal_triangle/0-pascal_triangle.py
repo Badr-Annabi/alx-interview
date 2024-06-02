@@ -6,9 +6,9 @@
 
 def pascal_triangle(n):
     """Displays Pascal's Triangle """
-    if n <= 0:
-        return
     triangle = []
+    if type(n) is not int or n <= 0:
+        return triangle
     current_row = [1]
     for i in range(n):
         triangle.append(current_row)
