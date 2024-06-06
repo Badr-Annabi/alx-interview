@@ -3,6 +3,7 @@
 
 
 def canUnlockAll(boxes):
+    """This function determines if all the boxes can be opened."""
     n = len(boxes)
     visited = set()
     queue = [0]
