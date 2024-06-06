@@ -1,4 +1,4 @@
-#!/usr/binenv python3
+#!/usr/bin/env python3
 """This function determines if all the boxes can be opened."""
 
 
