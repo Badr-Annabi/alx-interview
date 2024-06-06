@@ -4,6 +4,8 @@
 
 def canUnlockAll(boxes):
     """This function determines if all the boxes can be opened."""
+    if not boxes or type(boxes) is not list:
+        return False
     n = len(boxes)
     visited = set()
     queue = [0]
