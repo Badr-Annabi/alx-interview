@@ -1,7 +1,7 @@
 #!/usr/binenv python3
-
-
 """This function determines if all the boxes can be opened."""
+
+
 def canUnlockAll(boxes):
     n = len(boxes)
     visited = set()
