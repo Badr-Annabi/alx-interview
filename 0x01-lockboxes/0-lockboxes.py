@@ -4,9 +4,7 @@
 
 def canUnlockAll(boxes):
     """This function determines if all the boxes can be opened."""
-    if not isinstance(
-        boxes, list) or not all(
-            isinstance(box, list) for box in boxes):
+    if not boxes or type(boxes) is not list:
         return False
     n = len(boxes)
     visited = set()
@@ -19,4 +17,6 @@ def canUnlockAll(boxes):
             for key in boxes[current]:
                 if key < n:
                     queue.append(key)
-    return len(visited) == n
+    if len(visited) == n:
+        return True
+    return False
