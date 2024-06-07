@@ -3,7 +3,12 @@
 
 
 def canUnlockAll(boxes):
-    """This function determines if all the boxes can be opened."""
+    """
+     a method that determines if all the boxes can be opened.
+
+    :param boxes:
+    :return: True or False
+    """
     if not boxes or type(
         boxes) is not list or not all(
             isinstance(box, list) for box in boxes):
