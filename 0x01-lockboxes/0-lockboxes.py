@@ -4,7 +4,9 @@
 
 def canUnlockAll(boxes):
     """This function determines if all the boxes can be opened."""
-    if not boxes or type(boxes) is not list:
+    if not boxes or type(
+        boxes) is not list or not all(
+            isinstance(box, list) for box in boxes):
         return False
     n = len(boxes)
     visited = set()
