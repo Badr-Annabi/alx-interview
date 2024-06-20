@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
+""" This Python script reads stdin line by line and computes metrics"""
+
 import sys
 
-""" This Python script reads stdin line by line and computes metrics"""
-"""<IP Address> - [<date>] "GET /projects/260 HTTP/1.1"
-<status code> <file size>"""
 
 if __name__ == "__main__":
     file_size, line_count = 0, 0
