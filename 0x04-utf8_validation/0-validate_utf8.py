@@ -4,6 +4,7 @@ This method determines if a
 given data set represents a valid UTF-8 encoding.
 """
 
+
 def validUTF8(data):
     """
     returns True if data is a valid
@@ -14,7 +15,7 @@ def validUTF8(data):
     mask2 = 1 << 6
 
     for byte in data:
-        byte  = byte & 0xFF
+        byte = byte & 0xFF
 
         if num_bytes == 0:
             mask = 1 << 7
