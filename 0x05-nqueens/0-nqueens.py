@@ -25,12 +25,14 @@ if __name__ == "__main__":
         sol.append([i, None])
 
     def already_exists(y):
+        """check that a queen does not already exist in that y value"""
         for x in range(n):
             if y == sol[x][1]:
                 return True
         return False
 
     def reject_sol(x, y):
+        """Determines whether or not to reject the solution"""
         if (already_exists(y)):
             return False
         i = 0
@@ -41,10 +43,12 @@ if __name__ == "__main__":
         return True
 
     def clear_sol(x):
+        """Clears the answer from the point of falure on"""
         for i in range(x, n):
             sol[i][1] = None
 
     def nqueens(x):
+        """Recursive backtracking function to find the solution"""
         for y in range(n):
             clear_sol(x)
             if reject_sol(x, y):
