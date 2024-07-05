@@ -8,7 +8,6 @@ non-attacking queens on anN×N chessboard
 from sys import argv
 
 if __name__ == "__main__":
-
     sol = []
     if len(argv) != 2:
         print("Usage: nqueens N")
@@ -31,8 +30,8 @@ if __name__ == "__main__":
                 return True
         return False
 
-    def reject_sol(x, y):
-        """Determines whether or not to reject the solution"""
+    def reject(x, y):
+        """determines whether or not to reject the solution"""
         if (already_exists(y)):
             return False
         i = 0
@@ -42,19 +41,20 @@ if __name__ == "__main__":
             i += 1
         return True
 
-    def clear_sol(x):
-        """Clears the answer from the point of falure on"""
+    def clear_a(x):
+        """clears the answers from the point of failure on"""
         for i in range(x, n):
             sol[i][1] = None
 
     def nqueens(x):
-        """Recursive backtracking function to find the solution"""
+        """recursive backtracking function to find the solution"""
         for y in range(n):
-            clear_sol(x)
-            if reject_sol(x, y):
+            clear_a(x)
+            if reject(x, y):
                 sol[x][1] = y
                 if (x == n - 1):
                     print(sol)
                 else:
                     nqueens(x + 1)
+
     nqueens(0)
