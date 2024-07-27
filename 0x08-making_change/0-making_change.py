@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-
 def makeChange(coins, total):
     """
     this function determines the fewest number
