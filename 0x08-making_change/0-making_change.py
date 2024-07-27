@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Make changes"""
+
 
 def makeChange(coins, total):
     """
