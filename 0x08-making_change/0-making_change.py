@@ -9,10 +9,6 @@ def makeChange(coins, total):
     """
     if total <= 0:
         return 0
-    """
-    table[row][col] = table[row-1][col] +
-    table[row][col- coins[row-1]]
-    """
     table = [float('inf')] * (total + 1)
     table[0] = 0
 
