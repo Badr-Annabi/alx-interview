@@ -4,6 +4,8 @@
 
 def isWinner(x, nums):
     """Function to check who will win the game"""
+    if x is None or nums is None or x == 0 or nums == []:
+        return None
     maria = 0
     ben = 0
     for num in nums:
